@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahtab.brainteaser.MainActivity">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="131dp"
+        android:layout_height="31dp"
+        android:text="12 + 35 = ?"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/doneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="163dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="308dp"
+        android:text="Done!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plaAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="58dp"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doneTextView" />
+
+    <GridLayout
+        android:id="@+id/optionGridLayout"
+        android:layout_width="329dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="37dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/doneTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView">
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="158dp"
+        android:layout_height="228dp"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="116dp"
+        android:layout_height="114dp"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <ImageSwitcher
+        android:layout_width="85dp"
+        android:layout_height="10dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <AdapterViewFlipper
+        android:layout_width="75dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <ViewAnimator
+        android:layout_width="11dp"
+        android:layout_height="31dp"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+</android.support.constraint.ConstraintLayout>

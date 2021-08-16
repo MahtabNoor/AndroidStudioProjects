@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahtab.brainteaser2.MainActivity">
+
+    <TextView
+        android:id="@+id/calculationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="450dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="43dp"
+        android:tag="0"
+        android:text="12 + 54 "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="326dp"
+        android:layout_height="231dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/gridblocks"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculationTextView">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="163dp"
+            android:layout_height="115.5dp"
+            android:onClick="chooseAnswer"
+            android:tag="0"
+            android:text="65"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="163dp"
+            android:layout_height="115.5dp"
+            android:onClick="chooseAnswer"
+            android:tag="1"
+            android:text="65"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="163dp"
+            android:layout_height="115.5dp"
+            android:onClick="chooseAnswer"
+            android:tag="2"
+            android:text="65"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="163dp"
+            android:layout_height="115.5dp"
+            android:onClick="chooseAnswer"
+            android:tag="3"
+            android:text="65"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="64dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="timer"
+        android:tag="5"
+        android:text="16s"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/calculationTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="64dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_bright"
+        android:tag="6"
+        android:text="0/0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculationTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="82dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="40dp"
+        android:lineSpacingExtra="8sp"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="1dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:onClick="playAgain"
+        android:text="play again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

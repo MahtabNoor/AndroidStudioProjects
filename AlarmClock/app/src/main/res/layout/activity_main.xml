@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahtab.alarmclock.MainActivity">
+
+    <SeekBar
+        android:id="@+id/alarmLengthSeekBar"
+        android:layout_width="356dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clockImage"
+        android:layout_width="306dp"
+        android:layout_height="370dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmLengthSeekBar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/clockimage" />
+
+    <TextView
+        android:id="@+id/timeLeftTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:text="02:36"
+        android:textColor="?android:attr/textColorPrimaryNoDisable"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toTopOf="@+id/clockImage"
+        app:layout_constraintEnd_toStartOf="@+id/clockImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clockImage"
+        app:layout_constraintTop_toBottomOf="@+id/clockImage" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="86dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="67dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:onClick="startButton"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/timeLeftTextView"
+        app:layout_constraintEnd_toEndOf="@+id/alarmLengthSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/alarmLengthSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/alarmLengthSeekBar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+
+</android.support.constraint.ConstraintLayout>
